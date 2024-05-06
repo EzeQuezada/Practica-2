@@ -2,25 +2,33 @@
 
 namespace Person
 {
-    public class Persona
+    public abstract class Persona
     {
         private string? nombre;
         private int edad;
-        private string? dirección;
+        private string? direccion;
+        private string correoElectronico;
 
-        public void EnviarCorreoElectronico(string destinatario, string mensaje)
+
+        public Persona (string nombre, int edad, string direccion,string correoElectronico)
         {
-            // Lógica para enviar el correo electrónico
-            Console.WriteLine($"Enviando correo a: {destinatario}");
-            Console.WriteLine($"Mensaje: {mensaje}");
+            this.nombre = nombre;
+            this.edad = edad;
+            this.direccion = direccion;
+            this.correoElectronico = correoElectronico;
+            
         }
+        
+    
+        
 
-        public void ImprimirEnConsola()
+        public  void ImprimirEnConsola()
         {
             // Lógica para imprimir información en la consola
             Console.WriteLine($"Nombre: {nombre}");
             Console.WriteLine($"Edad: {edad} años");
-            Console.WriteLine($"Dirección: {dirección}");
+            Console.WriteLine($"Dirección: {direccion}");
+            Console.WriteLine($"Correo Electronico: {correoElectronico}");
         }
     }  
 }

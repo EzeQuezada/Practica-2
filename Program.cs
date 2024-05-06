@@ -1,2 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿
+using Person;
+
 Console.WriteLine("Hello, World!");
+
+Persona persona = new Persona("Ezequiel");
